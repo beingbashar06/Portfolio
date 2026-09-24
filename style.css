@@ -1898,3 +1898,557 @@ body.light-mode .learning-list span {
         width: 100%;
     }
 }
+
+/* update for mobile view */
+/* =========================================================
+   MOBILE RESPONSIVE FIX
+   Desktop design remains unchanged
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+    /* ---------- NAVBAR ---------- */
+
+    .navbar {
+        width: min(100% - 32px, 1120px);
+        padding: 18px 0 12px;
+
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-areas:
+            "logo theme"
+            "nav nav";
+
+        gap: 14px;
+
+        position: sticky;
+        top: 0;
+
+        background: rgba(7, 11, 20, 0.75);
+        backdrop-filter: blur(14px);
+    }
+
+    .logo {
+        grid-area: logo;
+        align-self: center;
+    }
+
+    .theme-toggle {
+        grid-area: theme;
+
+        width: 42px;
+        height: 42px;
+
+        justify-self: end;
+    }
+
+    nav {
+        grid-area: nav;
+
+        width: 100%;
+
+        display: flex;
+        flex-wrap: nowrap;
+
+        gap: 20px;
+
+        justify-content: flex-start;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        padding: 4px 2px 8px;
+
+        scrollbar-width: none;
+    }
+
+    nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    nav a {
+        flex: 0 0 auto;
+
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .hero {
+        width: min(100% - 32px, 1120px);
+
+        min-height: auto;
+
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+        padding-top: 55px;
+        padding-bottom: 80px;
+
+        text-align: center;
+    }
+
+    /*
+       IMPORTANT:
+       Text comes first.
+       Image comes after the text.
+    */
+
+    .hero-text {
+        order: 1;
+    }
+
+    .hero-image {
+        order: 2;
+
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin: 0 auto;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+
+        max-width: 620px;
+    }
+
+
+    /* ---------- HERO HEADING ---------- */
+
+    .hero h1 {
+        font-size: clamp(48px, 12vw, 72px);
+
+        line-height: 0.98;
+
+        letter-spacing: -3px;
+
+        margin-bottom: 18px;
+    }
+
+    .hero h2 {
+        font-size: clamp(20px, 5vw, 27px);
+
+        line-height: 1.35;
+
+        margin-bottom: 20px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+
+        line-height: 1.75;
+    }
+
+
+    /* ---------- BUTTONS ---------- */
+
+    .hero-buttons {
+        justify-content: center;
+
+        gap: 12px;
+
+        margin: 28px 0;
+    }
+
+    .btn {
+        padding: 13px 20px;
+
+        font-size: 14px;
+    }
+
+
+    /* ---------- STATS ---------- */
+
+    .quick-stats {
+        justify-content: center;
+
+        gap: 40px;
+
+        margin-top: 30px;
+    }
+
+    .quick-stats strong {
+        font-size: 25px;
+    }
+
+    .quick-stats span {
+        font-size: 11px;
+    }
+
+
+    /* ---------- PROFILE IMAGE ---------- */
+
+    .image-ring {
+        width: min(300px, 72vw);
+        height: min(300px, 72vw);
+
+        padding: 7px;
+    }
+
+    .image-ring img {
+        border-width: 7px;
+    }
+
+
+    /* ---------- FLOATING CARDS ---------- */
+
+    .floating-card {
+        font-size: 11px;
+
+        padding: 7px 11px;
+
+        border-radius: 10px;
+    }
+
+    .card-one {
+        top: 8%;
+        left: max(0px, calc(50% - 190px));
+    }
+
+    .card-two {
+        right: max(0px, calc(50% - 190px));
+        bottom: 15%;
+    }
+
+    .card-three {
+        left: max(0px, calc(50% - 170px));
+        bottom: 2%;
+    }
+
+
+    /* ---------- OTHER SECTIONS ---------- */
+
+    .about-grid,
+    .learning-box {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .project-card {
+        min-height: auto;
+    }
+
+    .learning-box {
+        gap: 35px;
+        min-height: auto;
+    }
+
+    .contact-box {
+        min-height: auto;
+        padding: 50px 35px;
+    }
+
+    .contact-details {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .contact-detail {
+        width: min(100%, 400px);
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE PHONES
+   ========================================================= */
+
+@media (max-width: 560px) {
+
+    /* ---------- PAGE WIDTH ---------- */
+
+    .section {
+        width: min(100% - 32px, 1120px);
+
+        padding: 65px 0;
+    }
+
+
+    /* ---------- NAVBAR ---------- */
+
+    .navbar {
+        width: calc(100% - 28px);
+
+        padding-top: 15px;
+    }
+
+    nav {
+        gap: 17px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .hero {
+        width: calc(100% - 32px);
+
+        gap: 35px;
+
+        padding-top: 42px;
+        padding-bottom: 65px;
+    }
+
+
+    /* ---------- HELLO I'M ---------- */
+
+    .hero .eyebrow {
+        font-size: 11px;
+
+        letter-spacing: 3px;
+
+        margin-bottom: 12px;
+    }
+
+
+    /* ---------- NAME ---------- */
+
+    .hero h1 {
+        font-size: clamp(46px, 14vw, 62px);
+
+        line-height: 0.98;
+
+        letter-spacing: -2.5px;
+
+        margin-bottom: 18px;
+    }
+
+
+    /* ---------- STUDENT TITLE ---------- */
+
+    .hero h2 {
+        font-size: 21px;
+
+        line-height: 1.35;
+
+        margin-bottom: 18px;
+    }
+
+
+    /* ---------- DESCRIPTION ---------- */
+
+    .hero-description {
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+
+    /* ---------- BUTTONS ---------- */
+
+    .hero-buttons {
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 12px;
+
+        margin: 26px 0;
+    }
+
+    .btn {
+        width: min(100%, 320px);
+
+        padding: 14px 20px;
+
+        text-align: center;
+
+        font-size: 15px;
+    }
+
+
+    /* ---------- PROFILE IMAGE ---------- */
+
+    .hero-image {
+        margin-top: 5px;
+    }
+
+    .image-ring {
+        width: min(285px, 74vw);
+        height: min(285px, 74vw);
+
+        padding: 6px;
+    }
+
+    .image-ring img {
+        border-width: 6px;
+    }
+
+
+    /* ---------- FLOATING CARDS ---------- */
+
+    .floating-card {
+        font-size: 10px;
+
+        padding: 6px 9px;
+
+        border-radius: 9px;
+    }
+
+    .card-one {
+        top: 8%;
+
+        left: max(0px, calc(50% - 180px));
+    }
+
+    .card-two {
+        right: max(0px, calc(50% - 180px));
+
+        bottom: 15%;
+    }
+
+    .card-three {
+        left: max(0px, calc(50% - 160px));
+
+        bottom: 2%;
+    }
+
+
+    /* ---------- STATS ---------- */
+
+    .quick-stats {
+        width: 100%;
+
+        justify-content: center;
+
+        gap: 45px;
+
+        margin-top: 28px;
+    }
+
+    .quick-stats strong {
+        font-size: 23px;
+    }
+
+    .quick-stats span {
+        font-size: 10px;
+
+        white-space: nowrap;
+    }
+
+
+    /* ---------- SKILLS ---------- */
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* ---------- LEARNING ---------- */
+
+    .learning-box {
+        padding: 30px 25px;
+    }
+
+    .learning-box h2 {
+        font-size: 42px;
+    }
+
+    .learning-box p:not(.eyebrow) {
+        font-size: 15px;
+    }
+
+
+    /* ---------- CONTACT ---------- */
+
+    .contact-box {
+        padding: 40px 22px;
+    }
+
+    .contact-box h2 {
+        font-size: 38px;
+
+        letter-spacing: -1px;
+    }
+
+    .contact-intro {
+        font-size: 15px;
+    }
+
+    .contact-detail {
+        width: 100%;
+
+        padding: 16px;
+    }
+
+    .contact-detail strong {
+        font-size: 14px;
+    }
+
+    .contact-links {
+        width: 100%;
+    }
+
+    .contact-links a {
+        width: 100%;
+    }
+
+
+    /* ---------- FOOTER ---------- */
+
+    footer {
+        flex-direction: column;
+
+        gap: 10px;
+
+        text-align: center;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .hero {
+        width: calc(100% - 24px);
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero h2 {
+        font-size: 19px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .image-ring {
+        width: 250px;
+        height: 250px;
+    }
+
+    .quick-stats {
+        gap: 28px;
+    }
+
+    .quick-stats strong {
+        font-size: 21px;
+    }
+
+    .quick-stats span {
+        font-size: 9px;
+    }
+}
